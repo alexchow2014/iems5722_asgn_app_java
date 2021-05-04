@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#FF9800"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/white"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="#FF9800"
+            android:contentDescription="@string/back_icon"
+            android:tint="#000000"
+            app:srcCompat="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/appbar_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="70dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="75dp" />
+
+        <ImageButton
+            android:id="@+id/refresh_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FF9800"
+            android:contentDescription="@string/refresh_icon"
+            android:tint="#000000"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/refresh_icon" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/input_place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ListView
+            android:id="@+id/listview_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:stackFromBottom="true"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/input_place"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="#80969696"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/Input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="@string/your_message"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="#80000000"
+            android:textSize="18sp"
+            android:tint="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <ImageButton
+            android:id="@+id/execute_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#00D0D0D0"
+            android:contentDescription="@string/exceute"
+            android:tint="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/execute" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

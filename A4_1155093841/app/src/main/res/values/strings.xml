@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">A4_1155093841</string>
+
+    //Main activity
+    <string name="list_of_chatroom">Available Chatroom</string>
+    <string name="menu_icon">menu_icon</string>
+
+    //Chat activity
+    <string name="chatroom">Chatroom</string>
+    <string name="back_icon">back_icon</string>
+    <string name="refresh_icon">refresh_icon</string>
+    <string name="your_message">Your message</string>
+    <string name="exceute">Exceute</string>
+    <string name="channel_name">Channel received</string>
+    <string name="channel_desc">awake when new message arrive.</string>
+</resources>
